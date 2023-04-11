@@ -1,0 +1,58 @@
+<div class="navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/homepage">what to wear!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/homepage">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/favorites">Favorites</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *ngFor="let c of category"><!--
+        <a class="dropdown-item" routerLink="/category/accessories">Accessories</a>
+       <a class="dropdown-item" routerLink="/category/boots">Boots</a>
+      <a class="dropdown-item" routerLink="/category/jackets">Jackets</a>
+       <a class="dropdown-item" routerLink="/category/dresses">Dresses</a>
+       <a class="dropdown-item" routerLink="/category/sneakers">Sneakers</a>
+        <a class="dropdown-item" routerLink="/category/skirts">Skirts</a>
+       <a class="dropdown-item" routerLink="/category/trousers">Trousers</a> 
+        -->
+  <a class="dropdown-item" routerLink="/category/{{c.category}}">{{c.category}}</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Brands
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/brand/adidas">Adidas</a>
+          <a class="dropdown-item" routerLink="/brand/buffalo">Buffalo</a>
+          <a class="dropdown-item" routerLink="/brand/nasty-gal">Nasty Gal</a>
+          <a class="dropdown-item" routerLink="/brand/ray-ban">Ray ban</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<!--<div class="card-class">
+   <div class="card" *ngFor="let i of items | filter: searchText" routerLink="/item/{{i.id}}" routerLinkActive="active"> -->
+   <!-- <fa-icon class="faHeart" [icon]="favourite(i.id)? faHeartSolid : faHeart" (click)="changeFavorite(i.id)"></fa-icon> 
+    <div class="image">
+    <img class="card-img-top" alt="clothing photo" [src]="i.image">
+  </div>
+    <div class="card-body">
+      <div class="card-data">
+      <h5 class="card-title">{{i.category}}</h5>
+      <p class="card-text">{{i.brand}}</p>
+    </div>
+    </div>
+  </div>-->

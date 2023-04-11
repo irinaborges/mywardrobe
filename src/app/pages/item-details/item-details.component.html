@@ -1,0 +1,18 @@
+<div class="card-class">
+    <div class="card" *ngIf="items">
+        <div class="card-body">
+            <div class="card-data">
+            <span class="card-text" routerLink="/category/{{items.category}}">{{items.category}}</span>
+            <p class="card-text">-</p>
+            <span class="card-text" routerLink="/brand/{{items.brand | replaceAll : ' ' : '-'}}">{{items.brand}}</span>
+          </div>
+          <div class="heart">
+          <fa-icon class="faHeart" [icon]="favourite(items.id)? faHeartSolid : faHeart" (click)="changeFavorite(items.id)"></fa-icon>
+          </div>
+        </div>
+        <p class="title">{{items.title}}</p>
+        <p class="color">{{items.color}}</p>
+      <div class="image">
+      <img class="card-img-top" alt="clothing photo" [src]="items.image">
+    </div>
+    </div>

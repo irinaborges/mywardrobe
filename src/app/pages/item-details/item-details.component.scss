@@ -1,0 +1,71 @@
+.card {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    max-width: 100%;
+
+        .card-body {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+
+            .title {
+                display: block;
+           }
+
+            .heart {
+              margin-right: 30px;  
+        
+                .faHeart {
+                    margin-top: 5px;
+                    position: absolute;
+                }
+
+                fa-icon {
+                    font-size: 30px;
+                }
+            }
+
+        .card-data {
+            display: flex;
+
+            .card-text {
+                font-weight: 400;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            span {
+                cursor: pointer;
+            }
+        }
+    
+    }
+
+        
+         .image {
+        margin: auto;
+
+            img {
+                width: 500px;
+                max-width: 80%;
+                margin-left: 15px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            
+  }
+    .title {
+     font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    margin-left: 15px;
+
+        }
+
+        .color {
+            margin-left: 16px;
+            font-size: 13px;
+            margin-top: 0;
+        }
+     }

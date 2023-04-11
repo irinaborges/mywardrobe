@@ -1,0 +1,29 @@
+  <!--<div class="card">
+  <mat-card class="example-card" *ngFor="let i of items">
+    <mat-card-header>
+      <mat-card-title>{{i.category}}</mat-card-title>
+      <mat-card-subtitle>{{i.brand}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image alt="clothing photo" [src]="i.image">
+  </mat-card>
+</div>-->
+<div class="card-class" *ngIf="items">
+  <div class="search_bar" class="input-group rounded">
+    <input type="text" class="form-control rounded" name="search" [(ngModel)]="searchText" autocomplete="off">
+    <span id="search-addon">
+<fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+     </span>
+  </div>
+  <div class="items-length">{{items.length}} items</div>
+  <div class="card" *ngFor="let i of items | filter: searchText">
+    <fa-icon class="faHeart" [icon]="favourite(i.id)? faHeartSolid : faHeart" (click)="changeFavorite(i.id)"></fa-icon>
+    <div class="image">
+    <img class="card-img-top" alt="clothing photo" [src]="i.image" routerLink="/item/{{i.id}}" routerLinkActive="active">
+  </div>
+    <div class="card-body" routerLink="/item/{{i.id}}" routerLinkActive="active">
+      <div class="card-data">
+      <h5 class="card-title">{{i.title}}</h5>
+      <p class="card-text" class="brand">{{i.brand}}</p>
+    </div>
+    </div>
+  </div>
